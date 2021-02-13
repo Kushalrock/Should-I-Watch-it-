@@ -53,6 +53,19 @@ form.addEventListener('submit',(e)=>{
   <div id="search-result"></div>`;
   getMovies(apiArray[1] + searchTerm,"search-result");
 })
+async function getVideo(id){
+  const path = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=802f2cc35253cb99efe6d36dc71ba39d&language=en-US`;
+  const detailsPath = `https://api.themoviedb.org/3/movie/${id}?api_key=802f2cc35253cb99efe6d36dc71ba39d&language=en-US`
+  const resp = await fetch(path);
+  const respJson = await resp.json();
+  console.log(respJson.results);
+  const videoUrl = "//www.youtube.com/embed/" + respJson.results[0].key;
+  console.log(videoUrl);
+  document.getElementById("popup").innerHTML = `
+    <iframe src=${videoUrl}  allowfullscreen="" width="100%" height="50%" frameborder="0"></iframe>
+  `
+}
+getVideo(464052);
 getMovies(apiArray[0],"popular-movies");
 getMovies(apiArray[2],"top-rated-movies");
 getMovies(apiArray[3],"upcoming-movies");

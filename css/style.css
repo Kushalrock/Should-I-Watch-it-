@@ -79,6 +79,16 @@ main::-webkit-scrollbar
 {
   display: none;
 }
+#popup{
+  width: 70vw;
+  height: 70vh;
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 50;
+  display: none;
+}
 .movie{
   border: 1px solid black;
   border-radius: 10px;
