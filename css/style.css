@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  box-sizing: border-box;
+  background-color: #272532;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  overflow-x: auto;
+
+  /*Scrolling for differnet browsers*/
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+main::-webkit-scrollbar
+{
+  display: none;
+}
+.movie{
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  background-color: #373B69;
+}
+.image{
+  width: 154px;
+  height: 231px;
+}
+.movie-info{
+  width: 154px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  font-size: 11px;
+}
+.movie-rating{
+  background-color: #272532;
+  color: lightgreen;
+  padding: 0px 9px;
+}
