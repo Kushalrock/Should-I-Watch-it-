@@ -54,10 +54,11 @@ body{
   flex-direction: column;
   padding: 10px;
 }
-.search-result{
+#search-result{
   display: flex;
   flex-direction: row;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .movie-handle h1{
   margin: 10px 0px;
@@ -86,6 +87,7 @@ main::-webkit-scrollbar
   margin-right: 40px;
   background-color: #373B69;
   height: 280px;
+  margin-top: 20px;
 }
 .movie:hover{
   transform: scale(1.02);
